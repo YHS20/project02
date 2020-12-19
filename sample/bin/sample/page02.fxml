@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+	<children>
+	
+	
+      <ImageView fx:id="checkImageView" fitHeight="140.0" fitWidth="140.0" layoutX="95.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+      	<image><Image url="@images/basic_image.png" /></image>
+      </ImageView>
+      
+      
+      <Label fx:id="label1" layoutX="60.0" layoutY="212.0" text="이름" />
+      <Label fx:id="label2" layoutX="60.0" layoutY="250.0" text="메모" />
+      
+      <Label fx:id="label3" layoutX="290.0" layoutY="74.0" text="1학년1학기" />
+      <Label fx:id="label4" layoutX="290.0" layoutY="116.0" text="1학년2학기" />
+      <Label fx:id="label5" layoutX="290.0" layoutY="163.0" text="2학년1학기" />
+      <Label fx:id="label6" layoutX="290.0" layoutY="205.0" text="2학년2학기" />
+      <Label fx:id="label7" layoutX="290.0" layoutY="251.0" text="3학년1학기" />
+      <Label fx:id="label8" layoutX="290.0" layoutY="293.0" text="3학년2학기" />
+      
+      
+      <TextField fx:id="txtTitle1" layoutX="95.0" layoutY="207.0" prefHeight="29.0" prefWidth="104.0" />
+      
+      
+      <TextArea fx:id="txtContent" layoutX="95.0" layoutY="248.0" prefHeight="73.0" prefWidth="154.0" />
+      
+      
+      <TextField fx:id="txtTitle2" layoutX="364.0" layoutY="69.0" prefHeight="29.0" prefWidth="104.0" />
+      <TextField fx:id="txtTitle3" layoutX="364.0" layoutY="112.0" prefHeight="29.0" prefWidth="104.0" />
+      <TextField fx:id="txtTitle4" layoutX="364.0" layoutY="157.0" prefHeight="29.0" prefWidth="104.0" />
+      <TextField fx:id="txtTitle5" layoutX="364.0" layoutY="200.0" prefHeight="29.0" prefWidth="104.0" />
+      <TextField fx:id="txtTitle6" layoutX="364.0" layoutY="246.0" prefHeight="29.0" prefWidth="104.0" />
+      <TextField fx:id="txtTitle7" layoutX="364.0" layoutY="289.0" prefHeight="29.0" prefWidth="104.0" />
+      
+      
+      <Button fx:id="btnReg1" layoutX="202.0" layoutY="207.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction1"/>
+      <Button fx:id="btnReg2" layoutX="202.0" layoutY="328.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction2"/>
+      
+      <Button fx:id="btnReg3" layoutX="471.0" layoutY="69.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction3"/>
+      <Button fx:id="btnReg4" layoutX="471.0" layoutY="112.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction4"/>
+      <Button fx:id="btnReg5" layoutX="471.0" layoutY="157.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction5"/>
+      <Button fx:id="btnReg6" layoutX="471.0" layoutY="200.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction6"/>
+      <Button fx:id="btnReg7" layoutX="471.0" layoutY="246.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction7"/>
+      <Button fx:id="btnReg8" layoutX="471.0" layoutY="289.0" mnemonicParsing="false" text="등록" onAction="#handleBtnRegAction8"/>
+      
+      <Button fx:id="btnReg9" layoutX="428.0" layoutY="328.0" mnemonicParsing="false" text="저장" onAction="#handleBtnRegAction9"/>
+      <Button fx:id="btnReg10" layoutX="471.0" layoutY="328.0" mnemonicParsing="false" text="보충" />
+	
+	
+	</children>
+</AnchorPane>
