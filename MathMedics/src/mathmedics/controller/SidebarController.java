@@ -27,9 +27,13 @@ public class SidebarController implements Initializable {
     }
 
     @FXML
-    private void dashboard(MouseEvent event) {
+    private void welcome(MouseEvent event) {
         bp.setCenter(ap);
-        loadPage("dashboard");
+    }
+
+    @FXML
+    private void dashboard(MouseEvent event) {
+        loadPage("page_dashboard");
     }
 
     @FXML

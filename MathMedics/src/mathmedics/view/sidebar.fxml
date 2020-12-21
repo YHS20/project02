@@ -29,7 +29,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.4em; -fx-font-weight: BOLD; -fx-fill: WHITE;" text="MATH MEDICS" />
+                        <Text onMouseClicked="#welcome" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.4em; -fx-font-weight: BOLD; -fx-fill: WHITE;" text="MATH MEDICS" />
                      </children>
                   </HBox>
                </children></HBox>
@@ -42,7 +42,7 @@
                      </HBox.margin>
                   </Button>
                </children></HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox prefHeight="100.0" HBox.hgrow="ALWAYS" />
             </children>
         </HBox>
     </top>
@@ -154,7 +154,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+            <VBox alignment="BOTTOM_CENTER" prefWidth="100.0" VBox.vgrow="ALWAYS">
                <children>
                   <HBox prefHeight="40.0" styleClass="hover_border">
                      <children>
@@ -205,12 +205,7 @@
    <center>
       <AnchorPane fx:id="ap" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="355.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-               <font>
-                  <Font size="41.0" />
-               </font>
-            </Text>
-            <VBox alignment="TOP_CENTER" layoutX="126.0" layoutY="145.0" prefHeight="250.0" prefWidth="150.0">
+            <VBox alignment="TOP_CENTER" layoutX="130.0" layoutY="115.0" prefHeight="250.0" prefWidth="150.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -227,6 +222,30 @@
                         </Text>
                      </children>
                   </VBox>
+               </children>
+            </VBox>
+            <VBox layoutX="365.0" layoutY="134.0" prefHeight="272.0" prefWidth="238.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
                </children>
             </VBox>
          </children></AnchorPane>
