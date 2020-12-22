@@ -17,65 +17,56 @@ import javafx.scene.layout.BorderPane;
 public class SidebarController implements Initializable {
 
     @FXML
-    private BorderPane bp;
+    public BorderPane bp;
+
     @FXML
-    private AnchorPane ap;
+    public AnchorPane ap;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 
+
     @FXML
-    private void welcome(MouseEvent event) {
-        bp.setCenter(ap);
+    public void cl_management(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_cl_management");
     }
 
     @FXML
-    private void dashboard(MouseEvent event) {
-        loadPage("page_dashboard");
+    public void class_list(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_class_list");
     }
 
     @FXML
-    private void student_list(MouseEvent event) {
-        loadPage("page_student_list");
+    public void setting(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_setting");
     }
 
     @FXML
-    private void stu_management(MouseEvent event) {
-        loadPage("page_stu_management");
+    public void dashboard(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_dashboard");
     }
 
     @FXML
-    private void class_list(MouseEvent event) {
-        loadPage("page_class_list");
+    public void stu_management(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_stu_management");
     }
 
     @FXML
-    private void cl_management(MouseEvent event) {
-        loadPage("page_cl_management");
+    public void student_list(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_student_list");
     }
 
     @FXML
-    private void support(MouseEvent event) {
-        loadPage("page_support");
+    public void support(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_support");
     }
 
     @FXML
-    private void setting(MouseEvent event) {
-        loadPage("page_setting");
-    }
-
-    private void loadPage (String page) {
-        Parent root = null;
-
-        try {
-            root = FXMLLoader.load(getClass().getResource("/mathmedics/view/" + page + ".fxml"));
-        } catch (IOException ex) {
-            Logger.getLogger(SidebarController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        bp.setCenter(root);
+    public void welcome(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "sidebar");
     }
 
 }
+

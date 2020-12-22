@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.S_M_Controller">
    <children>
       <HBox prefHeight="208.0" prefWidth="700.0">
          <children>
@@ -35,7 +35,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_id" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
@@ -48,7 +48,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_grade" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
@@ -61,7 +61,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_class" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
@@ -78,7 +78,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_name" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -91,7 +91,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_birthday" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -99,12 +99,12 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="SEX">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="GENDER">
                                  <VBox.margin>
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_gender" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -121,7 +121,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_mobile" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -134,7 +134,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
+                              <TextField fx:id="tf_address" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
@@ -177,7 +177,7 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Save">
+                  <Button mnemonicParsing="false" onMouseClicked="#save_btn" text="Save">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
