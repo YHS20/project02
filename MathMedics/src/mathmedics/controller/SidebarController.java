@@ -63,10 +63,6 @@ public class SidebarController implements Initializable {
         DynamicViews.loadBorderCenter(bp, "page_support");
     }
 
-    @FXML
-    public void welcome(MouseEvent event) throws IOException {
-        DynamicViews.loadBorderCenter(bp, "sidebar");
-    }
 
 }
 

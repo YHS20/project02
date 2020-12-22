@@ -29,7 +29,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Text onMouseClicked="#welcome" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.4em; -fx-font-weight: BOLD; -fx-fill: WHITE;" text="MATH MEDICS" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 1.4em; -fx-font-weight: BOLD; -fx-fill: WHITE;" text="MATH MEDICS" />
                      </children>
                   </HBox>
                </children></HBox>

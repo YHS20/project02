@@ -10,7 +10,7 @@ and open the template in the editor.
 
 .hover_border:hover {
     -fx-border-color: #0f4c81;
-    -fx-border-width: 0px 0px 0px 6px;
+    -fx-border-width: 0px 0px 0px 10px;
     -fx-background-color: #f7e600 !important;
     -fx-cursor: hand;
     

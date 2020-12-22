@@ -205,49 +205,11 @@
    <center>
       <AnchorPane fx:id="ap" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="130.0" layoutY="115.0" prefHeight="250.0" prefWidth="150.0">
-               <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../image/user_female.png" />
-                     </image>
-                  </ImageView>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13;" text="A Math Medic" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: Bold;" text="Yoon Gyung-Ju">
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </Text>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <VBox layoutX="365.0" layoutY="134.0" prefHeight="272.0" prefWidth="238.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-                     <font>
-                        <Font size="41.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-                     <font>
-                        <Font size="41.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-                     <font>
-                        <Font size="41.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
-                     <font>
-                        <Font size="41.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
+            <Text layoutX="152.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRST GRADE">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
    </center>
 </BorderPane>
