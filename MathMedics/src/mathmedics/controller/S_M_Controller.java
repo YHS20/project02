@@ -68,6 +68,9 @@ public class S_M_Controller {
                 "\n[ 이름: " + name + " ]" +"   [ 생일: " + birthday + " ]" + "   [ 성별: " + gender + " ]" +
                 "\n[ 전화: " + mobile + " ]" + "   [ 주소: " + address + " ]");
 
+//        int ind_id = Integer.parseInt(id);
+//        System.out.println(int_id);
+
     }
 
 }
