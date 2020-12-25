@@ -4,12 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import mathmedics.member.Student;
 import mathmedics.repository.memoryStudentRepository;
+import mathmedics.service.MemberService;
 
-import java.io.IOException;
+//import java.io.IOException;
+//import java.sql.ResultSet;
+//import java.sql.SQLException;
+import java.sql.*;
+import java.io.*;
 
 public class S_M_Controller {
 
@@ -37,26 +43,35 @@ public class S_M_Controller {
     @FXML
     private TextField tf_address;
 
+    @FXML
+    private Label print_info;
+
 
 
     @FXML
-    void save_btn(MouseEvent event) throws IOException {
+    void save_btn(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/page_cl_management.fxml"));
 
+        int birthday = 0;
+        String gender = "X";
+        String mobile = "X";
+        String save_result = "이미 가입된 회원정보 입니다.";
 
-        String id = tf_id.getText();
-        String grade = tf_grade.getText();
-        String mClass = tf_class.getText();
-        String name = tf_name.getText();
-        String birthday = tf_birthday.getText();
-        String gender = tf_gender.getText();
-        String mobile = tf_mobile.getText();
+        String grade = tf_grade.getText().replaceAll(" ","");
+        String name = tf_name.getText().replaceAll(" ","");
+        birthday = Integer.parseInt(tf_birthday.getText().replaceAll(" ",""));
+        gender = tf_gender.getText().replaceAll(" ","");
+        mobile = tf_mobile.getText().replaceAll("-","").replaceAll(" ","");
         String address = tf_address.getText();
 
-        Student student = new Student(grade,mClass,name,birthday,gender,mobile,address);
-        memoryStudentRepository memoryStudentRepository = new memoryStudentRepository();
-        memoryStudentRepository.save(student);
-    }
 
+        Student student = new Student(grade,name,birthday,gender,mobile,address);
+        memoryStudentRepository memoryStudentRepository = new memoryStudentRepository();
+        MemberService memberService = new MemberService(memoryStudentRepository);
+        save_result = memberService.join(student);
+//        ResultSet srs = memoryStudentRepository.findAll();
+
+        print_info.setText(save_result);
+    }
 }

@@ -2,18 +2,15 @@ package mathmedics.member;
 
 public class Student {
 
-    private int id;
-    private String birthday ;
+    private int birthday ;
     private String mobile ;
     private String grade ;
-    private String mClass ;
     private String name ;
     private String gender ;
     private String address ;
 
-    public Student(String grade, String mClass, String name, String birthday, String gender, String mobile, String address){
+    public Student(String grade, String name, int birthday, String gender, String mobile, String address){
         this.grade = grade;
-        this.mClass = mClass;
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
@@ -23,22 +20,15 @@ public class Student {
 
     @Override
     public String toString(){
-        return "'"+grade+"','"+mClass +"','"+name +"','"+birthday +"','"+gender+"','"+mobile +"','"+ address+"'" ;
+        return grade+",'"+name +"',"+birthday +",'"+gender+"','"+mobile +"','"+ address+"'" ;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getBirthday() {
+    public int getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(int birthday) {
         this.birthday = birthday;
     }
 
@@ -56,14 +46,6 @@ public class Student {
 
     public void setGrade(String grade) {
         this.grade = grade;
-    }
-
-    public String getmClass() {
-        return mClass;
-    }
-
-    public void setmClass(String mClass) {
-        this.mClass = mClass;
     }
 
     public String getName() {
