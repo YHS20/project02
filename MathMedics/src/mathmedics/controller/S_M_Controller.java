@@ -45,18 +45,19 @@ public class S_M_Controller {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/page_cl_management.fxml"));
 
 
-        String id = tf_id.getText();
-        String grade = tf_grade.getText();
-        String mClass = tf_class.getText();
-        String name = tf_name.getText();
-        String birthday = tf_birthday.getText();
-        String gender = tf_gender.getText();
-        String mobile = tf_mobile.getText();
-        String address = tf_address.getText();
+        String id = tf_id.getText().replaceAll(" ", "");
+        String grade = tf_grade.getText().replaceAll(" ", "");
+        String mClass = tf_class.getText().replaceAll(" ", "");
+        String name = tf_name.getText().replaceAll(" ", "");
+        String birthday = tf_birthday.getText().replaceAll(" ", "");
+        String gender = tf_gender.getText().replaceAll(" ", "");
+        String mobile = tf_mobile.getText().replaceAll(" ", "");
+        String address = tf_address.getText().replaceAll(" ", "");
 
         Student student = new Student(grade,mClass,name,birthday,gender,mobile,address);
         memoryStudentRepository memoryStudentRepository = new memoryStudentRepository();
         memoryStudentRepository.save(student);
+        
     }
 
 }

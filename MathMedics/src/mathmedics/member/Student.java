@@ -10,7 +10,8 @@ public class Student {
     private String name ;
     private String gender ;
     private String address ;
-
+    
+    
     public Student(String grade, String mClass, String name, String birthday, String gender, String mobile, String address){
         this.grade = grade;
         this.mClass = mClass;
