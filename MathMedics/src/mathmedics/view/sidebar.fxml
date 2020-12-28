@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -44,21 +43,7 @@
                      </image>
                   </ImageView>
                </children></HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <StackPane alignment="CENTER_RIGHT">
-                     <children>
-                        <Text style="-fx-fill: #0f4c81; -fx-font-weight: BOLD; -fx-font-size: 15; -fx-stroke-type: outside; -fx-stroke-width: 0;" text="2020-12-25, Friday" StackPane.alignment="CENTER">
-                           <StackPane.margin>
-                              <Insets left="20.0" right="20.0" />
-                           </StackPane.margin>
-                        </Text>
-                     </children>
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </StackPane>
-               </children></HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" HBox.hgrow="ALWAYS" />
             </children>
         </HBox>
     </top>

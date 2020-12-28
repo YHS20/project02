@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.S_M_Controller">
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.SM_Controller">
    <children>
       <HBox prefHeight="208.0" prefWidth="700.0">
          <children>
@@ -154,18 +154,8 @@
          </children></HBox>
       <HBox alignment="CENTER_LEFT">
          <children>
-            <Button mnemonicParsing="false" text="Delete">
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </Button>
             <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" text="Import">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin>
-                  </Button>
                   <Button mnemonicParsing="false" onMouseClicked="#save_btn" text="Save">
                      <HBox.margin>
                         <Insets right="20.0" />

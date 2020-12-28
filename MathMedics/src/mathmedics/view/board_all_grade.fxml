@@ -208,7 +208,7 @@
    <center>
       <AnchorPane fx:id="ap" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="152.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SECOND GRADE">
+            <Text layoutX="152.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALL GRADE">
                <font>
                   <Font size="41.0" />
                </font>
