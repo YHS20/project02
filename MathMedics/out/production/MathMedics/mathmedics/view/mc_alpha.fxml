@@ -37,8 +37,8 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="60.0" prefWidth="260.0">
                      <children>
-                        <TextField promptText="search" style="-fx-background-color: transparent;" />
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                        <TextField fx:id="tf_search" promptText="search" style="-fx-background-color: transparent;" />
+                        <ImageView fx:id="search" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#find_data" pickOnBounds="true" preserveRatio="true" styleClass="cursor_hand">
                            <image>
                               <Image url="@../icon/search.png" />
                            </image>
@@ -208,12 +208,17 @@
    <center>
       <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Make-up Class" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text=" ALPHA" />
+               </children>
+            </HBox>
             <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn fx:id="id" minWidth="30.0" prefWidth="30.0" text="ID" />
-                <TableColumn fx:id="grade" minWidth="50.0" prefWidth="50.0" text="GRADE" />
-                  <TableColumn fx:id="MClass" minWidth="55.0" prefWidth="55.0" text="CLASS" />
-                  <TableColumn fx:id="name" minWidth="50.0" prefWidth="50.0" text="NAME" />
+                <TableColumn fx:id="grade" minWidth="60.0" prefWidth="60.0" text="GRADE" />
+                  <TableColumn fx:id="MClass" minWidth="60.0" prefWidth="60.0" text="CLASS" />
+                  <TableColumn fx:id="name" minWidth="60.0" prefWidth="60.0" text="NAME" />
                   <TableColumn prefWidth="395.199951171875" text="SCORE">
                      <columns>
                         <TableColumn minWidth="-1.0" prefWidth="-1.0" text="소인수분해">
@@ -265,7 +270,7 @@
                   </TableColumn>
               </columns>
             </TableView>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="delete" mnemonicParsing="false" onMouseClicked="#delete_row" styleClass="cursor_hand" text="Delete">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>

@@ -208,18 +208,21 @@
    <center>
       <VBox alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="First Grade" />
+               </children>
+            </HBox>
             <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn fx:id="id" minWidth="30.0" prefWidth="30.0" text="ID" />
-                <TableColumn fx:id="grade" minWidth="70.0" prefWidth="70.0" text="GRADE" />
-                  <TableColumn fx:id="MClass" minWidth="70.0" prefWidth="70.0" text="CLASS" />
-                  <TableColumn fx:id="name" minWidth="70.0" prefWidth="70.0" text="NAME" />
+                <TableColumn fx:id="grade" minWidth="80.0" text="GRADE" />
+                  <TableColumn fx:id="name" minWidth="80.0" text="NAME" />
                   <TableColumn prefWidth="395.199951171875" text="INFOMATION">
                      <columns>
-                        <TableColumn fx:id="birthday" minWidth="70.0" prefWidth="70.0" text="BIRTHDAY" />
-                        <TableColumn fx:id="gender" minWidth="70.0" prefWidth="70.0" text="GENDER" />
+                        <TableColumn fx:id="birthday" minWidth="90.0" prefWidth="90.0" text="BIRTHDAY" />
+                        <TableColumn fx:id="gender" minWidth="90.0" prefWidth="90.0" text="GENDER" />
                         <TableColumn fx:id="mobile" minWidth="90.0" prefWidth="90.0" text="MOBLIE" />
-                        <TableColumn fx:id="address" minWidth="180.0" prefWidth="180.0" text="ADDRESS" />
+                        <TableColumn fx:id="address" minWidth="220.0" prefWidth="220.0" text="ADDRESS" />
                      </columns>
                   </TableColumn>
               </columns>

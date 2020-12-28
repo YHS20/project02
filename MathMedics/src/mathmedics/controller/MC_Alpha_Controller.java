@@ -6,11 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import mathmedics.model.DynamicViews;
-import mathmedics.model.MC_Alpha;
+import mathmedics.model.MC_Table;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,67 +24,70 @@ public class MC_Alpha_Controller implements Initializable {
     private BorderPane bp;
 
     @FXML
-    private TableView<MC_Alpha> table;
+    private TextField tf_search;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> id;
+    private ImageView search;
 
     @FXML
-    private TableColumn<MC_Alpha, String> grade;
+    private TableView<MC_Table> table;
 
     @FXML
-    private TableColumn<MC_Alpha, String> MClass;
+    private TableColumn<MC_Table, String> grade;
 
     @FXML
-    private TableColumn<MC_Alpha, String> name;
+    private TableColumn<MC_Table, String> MClass;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch1;
+    private TableColumn<MC_Table, String> name;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch2;
+    private TableColumn<MC_Table, Integer> ch1;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch3;
+    private TableColumn<MC_Table, Integer> ch2;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch4;
+    private TableColumn<MC_Table, Integer> ch3;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch5;
+    private TableColumn<MC_Table, Integer> ch4;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch6;
+    private TableColumn<MC_Table, Integer> ch5;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch7;
+    private TableColumn<MC_Table, Integer> ch6;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch8;
+    private TableColumn<MC_Table, Integer> ch7;
 
     @FXML
-    private TableColumn<MC_Alpha, Integer> ch9;
+    private TableColumn<MC_Table, Integer> ch8;
+
+    @FXML
+    private TableColumn<MC_Table, Integer> ch9;
 
 
-    ObservableList<MC_Alpha> list = FXCollections.observableArrayList(
+    ObservableList<MC_Table> list = FXCollections.observableArrayList(
 
-            new MC_Alpha(1, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Adam"),
-            new MC_Alpha(2, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Brown"),
-            new MC_Alpha(3, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Charlotte"),
-            new MC_Alpha(4, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Drake"),
-            new MC_Alpha(5, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Elizabeth"),
-            new MC_Alpha(6, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Frank"),
-            new MC_Alpha(7, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Gloria"),
-            new MC_Alpha(8, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Hayden"),
-            new MC_Alpha(9, 99, 87, 89, 77, 85, 92, 96, 100, 99,
+            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
                     "First", "Alpha", "Isabel")
             );
 
@@ -90,22 +95,31 @@ public class MC_Alpha_Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        id.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("id"));
-        ch1.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch1"));
-        ch2.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch2"));
-        ch3.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch3"));
-        ch4.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch4"));
-        ch5.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch5"));
-        ch6.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch6"));
-        ch7.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch7"));
-        ch8.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch8"));
-        ch9.setCellValueFactory(new PropertyValueFactory<MC_Alpha, Integer>("ch9"));
-        grade.setCellValueFactory(new PropertyValueFactory<MC_Alpha, String>("grade"));
-        MClass.setCellValueFactory(new PropertyValueFactory<MC_Alpha, String>("MClass"));
-        name.setCellValueFactory(new PropertyValueFactory<MC_Alpha, String>("name"));
+        ch1.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch1"));
+        ch2.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch2"));
+        ch3.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch3"));
+        ch4.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch4"));
+        ch5.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch5"));
+        ch6.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch6"));
+        ch7.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch7"));
+        ch8.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch8"));
+        ch9.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch9"));
+        grade.setCellValueFactory(new PropertyValueFactory<MC_Table, String>("grade"));
+        MClass.setCellValueFactory(new PropertyValueFactory<MC_Table, String>("MClass"));
+        name.setCellValueFactory(new PropertyValueFactory<MC_Table, String>("name"));
 
 
         table.setItems(list);
+    }
+
+    @FXML
+    void find_data(MouseEvent event) {
+
+    }
+
+    @FXML
+    void delete_row(MouseEvent event) {
+
     }
 
 

@@ -18,7 +18,7 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/user_student.png" />
+                        <Image url="@../image/user_group.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -27,20 +27,7 @@
                <children>
                   <HBox prefHeight="56.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="ID">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Text>
-                              <TextField fx:id="tf_id" promptText="000 ←세자리 숫자" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
-                           </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="GRADE">
                                  <VBox.margin>
@@ -53,24 +40,7 @@
                               <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="CLASS">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" />
-                                 </VBox.margin>
-                              </Text>
-                              <TextField fx:id="tf_class" promptText="Alpha, Beta, etc..." style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
-                           </children>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="58.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="NAME">
                                  <VBox.margin>
@@ -80,10 +50,14 @@
                               <TextField fx:id="tf_name" promptText="이선빈" style="-fx-background-color: transparent; -fx-border-color: GRAY;" />
                            </children>
                            <HBox.margin>
-                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="58.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="BIRTHDAY">
                                  <VBox.margin>
@@ -96,7 +70,7 @@
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="GENDER">
                                  <VBox.margin>
@@ -113,7 +87,7 @@
                   </HBox>
                   <HBox prefHeight="0.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <VBox alignment="CENTER_LEFT" prefWidth="125.0">
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="MOBILE">
                                  <VBox.margin>
@@ -126,7 +100,7 @@
                               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                            </HBox.margin>
                         </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                        <VBox alignment="CENTER_LEFT" prefWidth="100.0" HBox.hgrow="ALWAYS">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="ADDRESS">
                                  <VBox.margin>

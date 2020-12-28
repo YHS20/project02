@@ -13,13 +13,7 @@ import java.io.IOException;
 public class SM_Controller {
 
     @FXML
-    private TextField tf_id;
-
-    @FXML
     private TextField tf_grade;
-
-    @FXML
-    private TextField tf_class;
 
     @FXML
     private TextField tf_name;
@@ -44,29 +38,28 @@ public class SM_Controller {
     @FXML
     void save_btn(MouseEvent event) throws IOException {
 
-        String id = tf_id.getText();
         String grade = tf_grade.getText();
-        String MClass = tf_class.getText();
         String name = tf_name.getText();
         String birthday = tf_birthday.getText();
         String gender = tf_gender.getText();
         String mobile = tf_mobile.getText();
         String address = tf_address.getText();
 
-        System.out.println("아이디: " + id);
         System.out.println("학년: " + grade);
-        System.out.println("보충수업반: " + MClass);
         System.out.println("이름: " + name);
         System.out.println("생일: " + birthday);
         System.out.println("성별: " + gender);
         System.out.println("전화: " + mobile);
         System.out.println("주소: " + address);
 
-        print_info.setText("입력하신 정보가 성공적으로 DB에 저장 되었습니다.!\r\r" +
-                "[ 아이디: " + id + " ]" +
-                "\n[ 학년: " + grade + " ]" + "   [ 보충수업반: " + MClass + " ]"+
-                "\n[ 이름: " + name + " ]" +"   [ 생일: " + birthday + " ]" + "   [ 성별: " + gender + " ]" +
-                "\n[ 전화: " + mobile + " ]" + "   [ 주소: " + address + " ]");
+        print_info.setText("입력하신 정보는 데이터베이스에 성공적으로 저장 되었습니다.\r" +
+                "학생정보 확인은 'Student List' 페이지에서 확인해 주세요.\r\r" +
+                "\n[ 학년: " + grade + " ]" +
+                "\n[ 이름: " + name + " ]" +
+                "\n[ 생일: " + birthday + " ]" +
+                "\n[ 성별: " + gender + " ]" +
+                "\n[ 전화: " + mobile + " ]" +
+                "\n[ 주소: " + address + " ]");
 
 //        int ind_id = Integer.parseInt(id);
 //        System.out.println(int_id);

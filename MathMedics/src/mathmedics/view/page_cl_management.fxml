@@ -2,7 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
@@ -11,20 +11,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.CM_Controller">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.CM_Controller">
    <children>
       <VBox HBox.hgrow="ALWAYS">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-font-size: 15;" text="Select Student">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-font-size: 16;" text="Select Student">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Text>
             <MenuButton mnemonicParsing="false" text="GRADE">
                <items>
-                  <MenuItem mnemonicParsing="false" text="First Grade" />
-                  <MenuItem mnemonicParsing="false" text="Second Grade" />
-                  <MenuItem mnemonicParsing="false" text="Third Grade" />
+                  <MenuItem mnemonicParsing="false" onAction="#show_first" text="First Grade" />
+                  <MenuItem mnemonicParsing="false" onAction="#show_second" text="Second Grade" />
+                  <MenuItem mnemonicParsing="false" onAction="#show_third" text="Third Grade" />
                </items>
             </MenuButton>
             <ListView VBox.vgrow="ALWAYS" />
@@ -37,7 +37,7 @@
          <children>
             <VBox>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-font-size: 15;" text="Enter Score">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-font-size: 16;" text="Enter Score">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -51,19 +51,19 @@
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch01" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 02">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch02" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 03">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch03" promptText="두자리 수 입력" />
                            </children>
                            <HBox.margin>
                               <Insets />
@@ -79,19 +79,19 @@
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch04" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 05">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch05" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 06">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch06" promptText="두자리 수 입력" />
                            </children>
                            <HBox.margin>
                               <Insets />
@@ -107,19 +107,19 @@
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch07" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 08">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch08" promptText="두자리 수 입력" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chapter 09">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField />
+                              <TextField fx:id="ch09" promptText="두자리 수 입력" />
                            </children>
                            <HBox.margin>
                               <Insets />
@@ -135,100 +135,14 @@
                   <Insets />
                </VBox.margin>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-font-size: 15;" text="Select CLASS">
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Text>
-                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
-                     <children>
-                        <VBox HBox.hgrow="ALWAYS">
-                           <children>
-                              <CheckBox mnemonicParsing="false" text="Alpha">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Beta">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Gamma">
-                                 <VBox.margin>
-                                    <Insets top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </VBox>
-                        <VBox HBox.hgrow="ALWAYS">
-                           <children>
-                              <CheckBox mnemonicParsing="false" text="Delta">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Epsilon">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Zeta">
-                                 <VBox.margin>
-                                    <Insets top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </VBox>
-                        <VBox HBox.hgrow="ALWAYS">
-                           <children>
-                              <CheckBox mnemonicParsing="false" text="Eta">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Theta">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Iota">
-                                 <VBox.margin>
-                                    <Insets top="10.0" />
-                                 </VBox.margin>
-                              </CheckBox>
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </VBox>
-                     </children>
-                  </HBox>
+                  <Label fx:id="print_info" text="# 학생 선택후 빈칸에 점수를 입력 하세요 #" HBox.hgrow="ALWAYS" />
                </children>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </VBox>
-            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT">
                <children>
-                  <Button mnemonicParsing="false" text="Save" />
+                  <Button fx:id="save" mnemonicParsing="false" onMouseClicked="#save_score" text="Save" />
                </children>
             </HBox>
          </children>
