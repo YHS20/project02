@@ -1,12 +1,11 @@
 package mathmedics.service;
 
 
+
 import mathmedics.member.Student;
-import mathmedics.repository.StudentRepository;
 import mathmedics.repository.memoryStudentRepository;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -29,7 +28,7 @@ public class MemberService {
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = getConnection(url, "userstudent", "7276");
         Statement stmt = conn.createStatement();
-        sql = "select * from student_info where name='"+student.getName()+"';";
+        sql = "select * from student_info where Student_name='"+student.getName()+"';";
         stmt.executeQuery(sql);
         String save_result = memorystudentRepository.save(student);
         return save_result;

@@ -8,78 +8,85 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.S_L_Controller">
+<HBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.SL_Controller">
    <children>
-      <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+      <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
          <children>
-            <VBox alignment="CENTER" prefHeight="330.0" style="-fx-background-color: #fff;">
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../image/math01.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="First Grade">
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </Text>
+                  <VBox fx:id="first" alignment="CENTER" onMouseClicked="#into_FirstGrade" style="-fx-background-color: #fff;" styleClass="hover_border" stylesheets="@../css/page.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/math01.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="First Grade">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow color="#a4a4a4" height="75.0" offsetX="10.0" offsetY="10.0" radius="35.75" width="70.0" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="second" alignment="CENTER" onMouseClicked="#into_SecondGrade" style="-fx-background-color: #fff;" styleClass="hover_border" stylesheets="@../css/page.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/math02.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Second Grade">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow color="#a4a4a4" height="75.0" offsetX="10.0" offsetY="10.0" radius="35.75" width="70.0" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="third" alignment="CENTER" onMouseClicked="#into_ThirdGrade" style="-fx-background-color: #fff;" styleClass="hover_border" stylesheets="@../css/page.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/math03.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Third Grade">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow color="#a4a4a4" height="75.0" offsetX="10.0" offsetY="10.0" radius="35.75" width="70.0" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="30.0" top="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="all" alignment="CENTER" onMouseClicked="#into_allGrades" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="ALL Grades" />
                </children>
                <VBox.margin>
-                  <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
                </VBox.margin>
                <effect>
-                  <DropShadow color="#828282" height="97.26" offsetX="10.0" offsetY="10.0" radius="43.3625" width="78.19" />
+                  <DropShadow color="#a4a4a4" height="75.0" radius="35.75" width="70.0" />
                </effect>
-            </VBox>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
-         <children>
-            <VBox alignment="CENTER" prefHeight="330.0" style="-fx-background-color: #fff;">
-               <children>
-                  <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../image/math02.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Second Grade">
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </VBox.margin>
-               <effect>
-                  <DropShadow color="#828282" height="97.26" offsetX="10.0" offsetY="10.0" radius="43.3625" width="78.19" />
-               </effect>
-            </VBox>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
-         <children>
-            <VBox alignment="CENTER" prefHeight="330.0" style="-fx-background-color: #fff;">
-               <children>
-                  <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../image/math03.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Third Grade">
-                     <VBox.margin>
-                        <Insets top="30.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="40.0" top="20.0" />
-               </VBox.margin>
-               <effect>
-                  <DropShadow color="#828282" height="97.26" offsetX="10.0" offsetY="10.0" radius="43.3625" width="78.19" />
-               </effect>
-            </VBox>
+            </HBox>
          </children>
       </VBox>
    </children>

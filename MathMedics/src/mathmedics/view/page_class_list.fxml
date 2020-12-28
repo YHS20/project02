@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="mathmedics.controller.C_L_Controller">
+<HBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.CL_Controller">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
          <children>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Alpha" alignment="CENTER" onMouseClicked="#into_Alpha" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
@@ -28,12 +27,12 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc01.jpg" />
+                        <Image url="@../icon/mc1.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Beta" alignment="CENTER" onMouseClicked="#into_Beta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -45,7 +44,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc02.jpg" />
+                        <Image url="@../icon/mc2.png" />
                      </image>
                   </ImageView>
                </children>
@@ -53,7 +52,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Gamma" alignment="CENTER" onMouseClicked="#into_Gamma" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -65,7 +64,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc03.jpg" />
+                        <Image url="@../icon/mc3.png" />
                      </image>
                   </ImageView>
                </children>
@@ -83,7 +82,7 @@
             <Insets />
          </HBox.margin>
          <children>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Delta" alignment="CENTER" onMouseClicked="#into_Delta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -95,7 +94,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc04.jpg" />
+                        <Image url="@../icon/mc4.png" />
                      </image>
                   </ImageView>
                </children>
@@ -103,7 +102,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Epsilon" alignment="CENTER" onMouseClicked="#into_Epsilon" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -115,7 +114,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc05.jpg" />
+                        <Image url="@../icon/mc5.png" />
                      </image>
                   </ImageView>
                </children>
@@ -123,7 +122,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Zeta" alignment="CENTER" onMouseClicked="#into_Zeta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -135,7 +134,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc06.jpg" />
+                        <Image url="@../icon/mc6.png" />
                      </image>
                   </ImageView>
                </children>
@@ -150,7 +149,7 @@
             <Insets />
          </HBox.margin>
          <children>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Eta" alignment="CENTER" onMouseClicked="#into_Eta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -162,7 +161,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc07.jpg" />
+                        <Image url="@../icon/mc7.png" />
                      </image>
                   </ImageView>
                </children>
@@ -170,7 +169,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Theta" alignment="CENTER" onMouseClicked="#into_Theta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -182,7 +181,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc09.jpg" />
+                        <Image url="@../icon/mc8.png" />
                      </image>
                   </ImageView>
                </children>
@@ -190,7 +189,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Lota" alignment="CENTER" onMouseClicked="#into_Lota" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -202,7 +201,7 @@
                   </Text>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icon/mc08.jpg" />
+                        <Image url="@../icon/mc9.png" />
                      </image>
                   </ImageView>
                </children>
