@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import mathmedics.model.DynamicViews;
 import mathmedics.model.MC_Table;
+import mathmedics.repository.memoryStudentRepository;
 
 import java.io.IOException;
 import java.net.URL;
@@ -69,27 +70,9 @@ public class MC_Lota_Controller implements Initializable {
     private TableColumn<MC_Table, Integer> ch9;
 
 
-    ObservableList<MC_Table> list = FXCollections.observableArrayList(
+    memoryStudentRepository memoryrepository = new memoryStudentRepository();
+    ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Lota'");
 
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Adam"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Brown"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Charlotte"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Drake"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Elizabeth"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Frank"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Gloria"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Hayden"),
-            new MC_Table(99, 87, 89, 77, 85, 92, 96, 100, 99,
-                    "First", "Alpha", "Isabel")
-            );
 
 
     @Override

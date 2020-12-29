@@ -206,17 +206,20 @@
    <center>
       <AnchorPane fx:id="ap" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="130.0" layoutY="115.0" prefHeight="250.0" prefWidth="150.0">
+            <VBox alignment="TOP_CENTER" layoutX="95.0" layoutY="42.0">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                      <image>
                         <Image url="@../image/user_female.png" />
                      </image>
+                     <VBox.margin>
+                        <Insets bottom="18.0" />
+                     </VBox.margin>
                   </ImageView>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0">
+                  <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13;" text="A Mathematical Medic" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: Bold;" text="Yoon Gyung-Ju">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13;" text="A Mathematical Medic" VBox.vgrow="ALWAYS" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20; -fx-font-weight: Bold;" text="Yoon Gyung-Ju" VBox.vgrow="ALWAYS">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -228,30 +231,85 @@
                   <DropShadow color="#d5d5d5" height="65.0" offsetX="10.0" offsetY="10.0" radius="33.25" width="70.0" />
                </effect>
             </VBox>
-            <VBox layoutX="365.0" layoutY="134.0" prefHeight="272.0" prefWidth="238.0">
+            <VBox layoutX="291.0" layoutY="40.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-font-weight: BOLD;" text="DID YOU KNOW?">
                      <font>
                         <Font size="41.0" />
                      </font>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="This project began from an idea of a member">
                      <font>
                         <Font size="41.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Yoon of the team MATHMEDICS.">
                      <font>
                         <Font size="41.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
                   </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="Yoon is a mathematical teacher who has taught  ">
                      <font>
                         <Font size="41.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="middle school students around 6 years.">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="the main concept of mathmedics is efficiency to">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="save your time and money so just apply it.">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" text="this program will cut off your useless tasks.">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
                   </Text>
                </children>
             </VBox>
+            <HBox layoutX="88.0" layoutY="307.0">
+               <children>
+                  <ImageView fitHeight="170.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/efficiency02.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="170.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/efficiency01.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
          </children></AnchorPane>
    </center>
 </BorderPane>

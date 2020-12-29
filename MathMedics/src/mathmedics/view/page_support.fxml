@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <VBox alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Do you need a help? our Team will support you!" VBox.vgrow="ALWAYS">
@@ -22,7 +21,7 @@
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/support_female.png" />
+                        <Image url="@../image/profile-YGJ.png" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
@@ -77,7 +76,7 @@
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/support_male.png" />
+                        <Image url="@../image/profile_PHB.png" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
@@ -136,7 +135,7 @@
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/support_male.png" />
+                        <Image url="@../image/profile-JSB.png" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
@@ -191,7 +190,7 @@
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/support_female.png" />
+                        <Image url="@../image/profile-YHS.jpg" />
                      </image>
                   </ImageView>
                   <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">

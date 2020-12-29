@@ -7,8 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import mathmedics.member.Student;
+import mathmedics.repository.memoryStudentRepository;
+import mathmedics.service.MemberService;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class SM_Controller {
 
@@ -36,33 +40,30 @@ public class SM_Controller {
 
 
     @FXML
-    void save_btn(MouseEvent event) throws IOException {
+    void save_btn(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
 
-        String grade = tf_grade.getText();
-        String name = tf_name.getText();
-        String birthday = tf_birthday.getText();
-        String gender = tf_gender.getText();
-        String mobile = tf_mobile.getText();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/page_cl_management.fxml"));
+
+        int birthday = 0;
+        String gender = "X";
+        String mobile = "X";
+        String save_result = "오류입니다. \n 이미 가입된 회원정보 이거나 맞지 않는 정보를 입력하였습니다.";
+
+        String grade = tf_grade.getText().replaceAll(" ","").toLowerCase();
+        String name = tf_name.getText().replaceAll(" ","");
+        birthday = Integer.parseInt(tf_birthday.getText().replaceAll(" ",""));
+        gender = tf_gender.getText().replaceAll(" ","");
+        mobile = tf_mobile.getText().replaceAll("-","").replaceAll(" ","");
         String address = tf_address.getText();
 
-        System.out.println("학년: " + grade);
-        System.out.println("이름: " + name);
-        System.out.println("생일: " + birthday);
-        System.out.println("성별: " + gender);
-        System.out.println("전화: " + mobile);
-        System.out.println("주소: " + address);
 
-        print_info.setText("입력하신 정보는 데이터베이스에 성공적으로 저장 되었습니다.\r" +
-                "학생정보 확인은 'Student List' 페이지에서 확인해 주세요.\r\r" +
-                "\n[ 학년: " + grade + " ]" +
-                "\n[ 이름: " + name + " ]" +
-                "\n[ 생일: " + birthday + " ]" +
-                "\n[ 성별: " + gender + " ]" +
-                "\n[ 전화: " + mobile + " ]" +
-                "\n[ 주소: " + address + " ]");
+        Student student = new Student(grade,name,birthday,gender,mobile,address);
+        memoryStudentRepository memoryStudentRepository = new memoryStudentRepository();
+        MemberService memberService = new MemberService(memoryStudentRepository);
+        save_result = memberService.join(student);
+//        ResultSet srs = memoryStudentRepository.findAll();
 
-//        int ind_id = Integer.parseInt(id);
-//        System.out.println(int_id);
+        print_info.setText(save_result);
 
     }
 

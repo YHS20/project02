@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import mathmedics.model.DynamicViews;
 import mathmedics.model.Grade;
+import mathmedics.repository.memoryStudentRepository;
 
 import java.io.IOException;
 import java.net.URL;
@@ -46,19 +47,8 @@ public class ThirdGrade_Controller implements Initializable {
     @FXML
     private TableColumn<Grade, String> address;
 
-    ObservableList<Grade> list = FXCollections.observableArrayList(
-
-
-            new Grade("First", "Alpha", "2000.05.01", "Male","01034882241", "서울특별시 강남구"),
-            new Grade("First", "Brown", "2000.02.01", "Male", "01087834626", "서울특별시 용산구"),
-            new Grade("First", "Charlotte", "2000.03.24", "Female","01077265391", "서울특별시 서초구"),
-            new Grade("First", "Drake", "2000.06.11", "Male","01033261519", "서울특별시 강서구"),
-            new Grade("First", "Elizabeth", "2000.09.06", "Female","01029746565", "서울특별시 금천구"),
-            new Grade("First", "Frank", "2000.01.02", "Male","01098371612", "서울특별시 양천구"),
-            new Grade("First", "Gloria", "2000.12.22", "Female","01066251856", "셔울특별시 중량구"),
-            new Grade("First", "Hayden", "2000.11.03", "Male","01038762511", "서울특별시 마포구"),
-            new Grade("First", "Ivan", "2000.08.25", "Female","01033271693", "서울특별시 서대문구")
-    );
+    memoryStudentRepository memoryrepository = new memoryStudentRepository();
+    ObservableList<Grade> list = memoryrepository.findAll("where grade = 'third'");
 
 
     @Override

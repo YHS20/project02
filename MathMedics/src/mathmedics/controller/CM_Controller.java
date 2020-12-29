@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import mathmedics.member.class_info;
 
 import java.io.IOException;
 import java.net.URL;
@@ -55,25 +56,20 @@ public class CM_Controller implements Initializable {
     @FXML
     void save_score(MouseEvent event) {
 
-        String ch1 = ch01.getText();
-        String ch2 = ch02.getText();
-        String ch3 = ch03.getText();
-        String ch4 = ch04.getText();
-        String ch5 = ch05.getText();
-        String ch6 = ch06.getText();
-        String ch7 = ch07.getText();
-        String ch8 = ch08.getText();
-        String ch9 = ch09.getText();
 
-        System.out.println("Chapter01 성적: " + ch1);
-        System.out.println("Chapter02 성적: " + ch2);
-        System.out.println("Chapter03 성적: " + ch3);
-        System.out.println("Chapter04 성적: " + ch4);
-        System.out.println("Chapter05 성적: " + ch5);
-        System.out.println("Chapter06 성적: " + ch6);
-        System.out.println("Chapter07 성적: " + ch7);
-        System.out.println("Chapter08 성적: " + ch8);
-        System.out.println("Chapter09 성적: " + ch9);
+
+        int ch1 = Integer.parseInt(ch01.getText());
+        int ch2 = Integer.parseInt(ch02.getText());
+        int ch3 = Integer.parseInt(ch03.getText());
+        int ch4 = Integer.parseInt(ch04.getText());
+        int ch5 = Integer.parseInt(ch05.getText());
+        int ch6 = Integer.parseInt(ch06.getText());
+        int ch7 = Integer.parseInt(ch07.getText());
+        int ch8 = Integer.parseInt(ch08.getText());
+        int ch9 = Integer.parseInt(ch09.getText());
+
+//        class_info cinfo = new class_info(ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9);
+
 
         print_info.setText("입력하신 성적은 데이터베이스에 성공적으로 저장 되었습니다.\r" +
                 "성적정보 확인은 'Class List' 페이지에서 확인해 주세요.\r\r" +
