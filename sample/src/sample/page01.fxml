@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button layoutX="109.0" layoutY="21.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student1" />
+      <Button layoutX="244.0" layoutY="21.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student2" />
+      <Button layoutX="379.0" layoutY="21.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student3" />
+      <Button layoutX="379.0" layoutY="145.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student6" />
+      <Button layoutX="244.0" layoutY="145.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student5" />
+      <Button layoutX="109.0" layoutY="145.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student4" />
+      <Button layoutX="379.0" layoutY="272.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student9" />
+      <Button layoutX="244.0" layoutY="272.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student8" />
+      <Button layoutX="109.0" layoutY="272.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="113.0" text="student7" />
+   </children>
+</AnchorPane>
