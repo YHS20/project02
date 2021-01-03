@@ -2,17 +2,35 @@ package mathmedics.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import mathmedics.model.Grade;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CM_Controller implements Initializable {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+
+    @FXML private ListView<String> listview;
+
+    @FXML
+    private MenuItem one;
+
+    @FXML
+    private MenuItem two;
+
+    @FXML
+    private MenuItem three;
 
     @FXML
     private TextField ch01;
@@ -46,11 +64,6 @@ public class CM_Controller implements Initializable {
 
     @FXML
     private Label print_info;
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }
 
     @FXML
     void save_score(MouseEvent event) {
@@ -91,16 +104,20 @@ public class CM_Controller implements Initializable {
 
     @FXML
     void show_first(ActionEvent event) {
+        listview.getItems().addAll("one");
+
 
     }
 
     @FXML
     void show_second(ActionEvent event) {
+        listview.getItems().addAll("two");
 
     }
 
     @FXML
     void show_third(ActionEvent event) {
+        listview.getItems().addAll("three");
 
     }
 
