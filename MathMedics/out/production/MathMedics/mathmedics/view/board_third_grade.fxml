@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/sidebar.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.ThirdGrade_Controller">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/sidebar.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.Grade_Controller_of_Third">
     <top>
         <HBox prefHeight="60.0" BorderPane.alignment="CENTER">
             <children>
@@ -107,7 +107,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#stu_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Stu Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#stuent_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Stu Management" />
                      </children>
                   </HBox>
                </children>
@@ -149,7 +149,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#cl_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Cl Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#class_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Cl Management" />
                      </children>
                   </HBox>
                </children>

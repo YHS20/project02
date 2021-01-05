@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.Sidebar_SM_Controller">
+   <children>
+      <HBox prefHeight="208.0" prefWidth="700.0">
+         <children>
+            <VBox alignment="CENTER" prefWidth="210.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_group.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="150.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="GRADE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXComboBox fx:id="combo_grade" onAction="#select_grade" promptText="Select Grade" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefWidth="150.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="GENDER">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXComboBox fx:id="combo_gender" onAction="#select_gender" promptText="Select Gender" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="58.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="150.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="NAME">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXTextField fx:id="tf_name" promptText="이선빈" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefWidth="240.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="BIRTHDAY">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXComboBox fx:id="combo_year" onAction="#select_year" promptText="Year" />
+                                    <JFXComboBox fx:id="combo_month" onAction="#select_month" promptText="Month" />
+                                    <JFXComboBox fx:id="combo_day" onAction="#select_day" promptText="Day" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="470.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefWidth="150.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="MOBILE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXTextField fx:id="tf_mobile" promptText="01098762345" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefWidth="240.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 13; -fx-font-weight: BOLD;" text="ADDRESS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <JFXTextField fx:id="tf_address" promptText="서울특별시 성북구 안암로 145" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="print_info" text="# 학생 정보를 빈칸에 입력 하세요 #" HBox.hgrow="ALWAYS" />
+         </children></HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#save_btn" text="Save">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin></HBox>
+   </children>
+</VBox>

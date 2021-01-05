@@ -74,7 +74,6 @@ public class MC_Alpha_Controller implements Initializable {
     ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Alpha'");
 
 
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -107,8 +106,8 @@ public class MC_Alpha_Controller implements Initializable {
 
 
     @FXML
-    public void cl_management(MouseEvent event) throws IOException {
-        DynamicViews.loadBorderCenter(bp, "page_cl_management");
+    public void class_management(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_class_management");
     }
 
     @FXML
@@ -127,8 +126,8 @@ public class MC_Alpha_Controller implements Initializable {
     }
 
     @FXML
-    public void stu_management(MouseEvent event) throws IOException {
-        DynamicViews.loadBorderCenter(bp, "page_stu_management");
+    public void student_management(MouseEvent event) throws IOException {
+        DynamicViews.loadBorderCenter(bp, "page_student_management");
     }
 
     @FXML

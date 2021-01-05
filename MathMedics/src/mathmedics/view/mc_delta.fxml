@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/sidebar.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mathmedics.controller.MC_Delta_Controller">
     <top>
@@ -107,7 +101,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#stu_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Stu Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#student_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Student Management" />
                      </children>
                   </HBox>
                </children>
@@ -149,7 +143,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#cl_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Cl Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#class_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Class Management" />
                      </children>
                   </HBox>
                </children>
@@ -178,27 +172,6 @@
                      </children>
                      <VBox.margin>
                         <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox prefHeight="40.0" styleClass="hover_border">
-                     <children>
-                        <HBox alignment="CENTER" prefWidth="100.0">
-                           <children>
-                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../icon/setting.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Button mnemonicParsing="false" onMouseClicked="#setting" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Setting" />
-                           </children>
-                        </HBox>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </HBox>
                </children>

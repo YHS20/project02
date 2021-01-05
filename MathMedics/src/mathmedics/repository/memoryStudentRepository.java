@@ -61,7 +61,7 @@ public class memoryStudentRepository implements StudentRepository{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = getConnection(url, "userstudent", "7276");
             Statement stmt = conn.createStatement();
-            sql = "select grade,className,Student_Class.Student_name,ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9 "+
+            sql = "select DISTINCT grade,className,Student_Class.Student_name,ch1,ch2,ch3,ch4,ch5,ch6,ch7,ch8,ch9 "+
                     "from student_info left join Class_info on student_info.Student_name = Class_info.Student_name left join Student_Class on student_info.Student_name = Student_Class.Student_name "
                     + s ;
             ResultSet srs = stmt.executeQuery(sql);
