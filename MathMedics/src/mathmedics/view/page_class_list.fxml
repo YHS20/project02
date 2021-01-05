@@ -12,7 +12,7 @@
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
          <children>
-            <HBox fx:id="Alpha" alignment="CENTER" onMouseClicked="#into_Alpha" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Alpha" alignment="CENTER" onMouseClicked="#into_Alpha" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
@@ -32,7 +32,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox fx:id="Beta" alignment="CENTER" onMouseClicked="#into_Beta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Beta" alignment="CENTER" onMouseClicked="#into_Beta" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -52,7 +52,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox fx:id="Gamma" alignment="CENTER" onMouseClicked="#into_Gamma" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Gamma" alignment="CENTER" onMouseClicked="#into_Gamma" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -82,7 +82,7 @@
             <Insets />
          </HBox.margin>
          <children>
-            <HBox fx:id="Delta" alignment="CENTER" onMouseClicked="#into_Delta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Delta" alignment="CENTER" onMouseClicked="#into_Delta" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -102,7 +102,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox fx:id="Epsilon" alignment="CENTER" onMouseClicked="#into_Epsilon" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Epsilon" alignment="CENTER" onMouseClicked="#into_Epsilon" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -122,7 +122,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox fx:id="Zeta" alignment="CENTER" onMouseClicked="#into_Zeta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Zeta" alignment="CENTER" onMouseClicked="#into_Zeta" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -149,7 +149,7 @@
             <Insets />
          </HBox.margin>
          <children>
-            <HBox fx:id="Eta" alignment="CENTER" onMouseClicked="#into_Eta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Eta" alignment="CENTER" onMouseClicked="#into_Eta" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -169,7 +169,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox fx:id="Theta" alignment="CENTER" onMouseClicked="#into_Theta" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Theta" alignment="CENTER" onMouseClicked="#into_Theta" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -189,7 +189,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox fx:id="Lota" alignment="CENTER" onMouseClicked="#into_Lota" style="-fx-background-color: white;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
+            <HBox fx:id="Lota" alignment="CENTER" onMouseClicked="#into_Lota" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="hover_border" stylesheets="@../css/page.css" VBox.vgrow="ALWAYS">
                <effect>
                   <DropShadow color="#b7b7b7" height="78.2" offsetX="10.0" offsetY="10.0" radius="29.065" width="40.06" />
                </effect>
@@ -212,4 +212,7 @@
          </children>
       </VBox>
    </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
 </HBox>

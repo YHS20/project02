@@ -97,7 +97,6 @@ public class Sidebar_SM_Controller implements Initializable {
         mobile = tf_mobile.getText().replaceAll("-", "").replaceAll(" ", "");
         String address = tf_address.getText();
 
-
         Student student = new Student(grade, name, birthday, gender, mobile, address);
         memoryStudentRepository memoryStudentRepository = new memoryStudentRepository();
         MemberService memberService = new MemberService(memoryStudentRepository);

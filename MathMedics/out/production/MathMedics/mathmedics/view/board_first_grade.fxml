@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -33,19 +34,32 @@
                      </children>
                   </HBox>
                </children></HBox>
-            <HBox prefHeight="100.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="260.0" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="260.0">
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <TextField promptText="search" style="-fx-background-color: transparent;" />
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icon/search.png" />
-                           </image>
-                        </ImageView>
+                        <JFXTextField promptText="MEMO" />
+                        <JFXTextField promptText="write here anything">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </JFXTextField>
                      </children>
-                  </HBox>
-               </children></HBox>
+                     <HBox.margin>
+                        <Insets left="30.0" right="50.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="label_clock" style="-fx-font-size: 14; -fx-alignment: center; -fx-font-weight: bold; -fx-background-color: #0f4c81; -fx-text-fill: white; -fx-background-radius: 5;" text="  date &amp; time  " textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
             </children>
         </HBox>
     </top>
@@ -107,7 +121,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#student_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Stu Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#student_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Student Management" />
                      </children>
                   </HBox>
                </children>
@@ -149,7 +163,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#class_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Cl Management" />
+                        <Button mnemonicParsing="false" onMouseClicked="#class_management" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Class Management" />
                      </children>
                   </HBox>
                </children>
@@ -178,27 +192,6 @@
                      </children>
                      <VBox.margin>
                         <Insets bottom="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox prefHeight="40.0" styleClass="hover_border">
-                     <children>
-                        <HBox alignment="CENTER" prefWidth="100.0">
-                           <children>
-                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../icon/setting.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Button mnemonicParsing="false" onMouseClicked="#setting" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Setting" />
-                           </children>
-                        </HBox>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </HBox>
                </children>
@@ -234,7 +227,7 @@
             </Button>
          </children>
          <BorderPane.margin>
-            <Insets bottom="30.0" left="30.0" right="30.0" />
+            <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
          </BorderPane.margin>
          <opaqueInsets>
             <Insets />

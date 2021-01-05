@@ -102,6 +102,7 @@ public class Sidebar_SL_Controller extends Sidebar_Controller implements Initial
         }
 
     }
+
 }
 
 //    public void movePage() {

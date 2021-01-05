@@ -15,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import mathmedics.model.MC_Table;
 import mathmedics.repository.memoryStudentRepository;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -138,8 +139,11 @@ public class Sidebar_CM_Controller implements Initializable {
     private Button btn_save;
 
     private FXMLLoader loader;
-    private boolean EDIT=false, ADD=true;
+    private boolean EDIT = false, ADD = true;
     private MappingChange.Map<String, Object> map;
+
+    private String catch_name, catch_combo_grade, catch_combo_class;
+    private Integer catch_ch1, catch_ch2, catch_ch3, catch_ch4, catch_ch5, catch_ch6, catch_ch7, catch_ch8, catch_ch9;
 
 
     @Override
@@ -162,62 +166,65 @@ public class Sidebar_CM_Controller implements Initializable {
         combo_grade.setItems(grade_list);
 
         ObservableList<String> class_list = FXCollections.observableArrayList("alpha", "beta", "delta"
-        , "epsilon", "eta", "gamma", "lota", "theta", "zeta");
+                , "epsilon", "eta", "gamma", "lota", "theta", "zeta");
         combo_class.setItems(class_list);
 
-        menu_alpha.setOnAction(e->{
+        menu_alpha.setOnAction(e -> {
             replaceTableAlpha();
         });
 
-        menu_beta.setOnAction(e->{
+        menu_beta.setOnAction(e -> {
             replaceTableBeta();
         });
 
-        menu_delta.setOnAction(e->{
+        menu_delta.setOnAction(e -> {
             replaceTableDelta();
         });
 
-        menu_epsilon.setOnAction(e->{
+        menu_epsilon.setOnAction(e -> {
             replaceTableEpsilon();
         });
 
-        menu_eta.setOnAction(e->{
+        menu_eta.setOnAction(e -> {
             replaceTableEta();
         });
 
-        menu_gamma.setOnAction(e->{
+        menu_gamma.setOnAction(e -> {
             replaceTableGamma();
         });
 
-        menu_lota.setOnAction(e->{
+        menu_lota.setOnAction(e -> {
             replaceTableLota();
         });
 
-        menu_theata.setOnAction(e->{
+        menu_theata.setOnAction(e -> {
             replaceTableTheta();
         });
 
-        menu_zeta.setOnAction(e->{
+        menu_zeta.setOnAction(e -> {
             replaceTableZeta();
         });
 
-//        btn_save.setOnAction(e->{
-//            saveAccount();
-//        });
-//        btn_print_preview.setOnAction(e->{
-//            printReport();
-//        });
-        btn_edit.setOnAction(e->{
+        btn_save.setOnAction(e->{
+            saveStudentAttribute();
+        });
+
+        btn_edit.setOnAction(e -> {
             ADD = false;
             EDIT = true;
             editStudentAttribute();
         });
+
+//        btn_print_preview.setOnAction(e->{
+//            printReport();
+//        });
 
 //        btn_add_new.setOnAction(e->{
 //            EDIT = false;
 //            ADD = true;
 //            insertNewAccount();
 //        });
+
 //        btn_delete.setOnAction(e->{
 //            deleteAccount();
 //        });
@@ -228,47 +235,47 @@ public class Sidebar_CM_Controller implements Initializable {
     memoryStudentRepository memoryrepository = new memoryStudentRepository();
 
     private void replaceTableAlpha() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Alpha'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Alpha'");
         table.setItems(list);
     }
 
     private void replaceTableBeta() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Beta'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Beta'");
         table.setItems(list);
     }
 
     private void replaceTableDelta() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Delta'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Delta'");
         table.setItems(list);
     }
 
     private void replaceTableEpsilon() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Epsilon'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Epsilon'");
         table.setItems(list);
     }
 
     private void replaceTableEta() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Eta'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Eta'");
         table.setItems(list);
     }
 
     private void replaceTableGamma() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Gamma'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Gamma'");
         table.setItems(list);
     }
 
     private void replaceTableLota() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Lota'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Lota'");
         table.setItems(list);
     }
 
     private void replaceTableTheta() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Theta'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Theta'");
         table.setItems(list);
     }
 
     private void replaceTableZeta() {
-        ObservableList<MC_Table>  list = memoryrepository.findByclass("where Student_Class.className = 'Zeta'");
+        ObservableList<MC_Table> list = memoryrepository.findByclass("where Student_Class.className = 'Zeta'");
         table.setItems(list);
     }
 
@@ -290,5 +297,35 @@ public class Sidebar_CM_Controller implements Initializable {
 
     }
 
+    private void saveStudentAttribute() {
 
+        catch_combo_grade = combo_grade.getSelectionModel().getSelectedItem();
+        catch_combo_class = combo_class.getSelectionModel().getSelectedItem();
+        catch_name = enter_name.getText();
+        catch_ch1 = Integer.valueOf(enter_ch01.getText());
+        catch_ch2 = Integer.valueOf(enter_ch02.getText());
+        catch_ch3 = Integer.valueOf(enter_ch03.getText());
+        catch_ch4 = Integer.valueOf(enter_ch04.getText());
+        catch_ch5 = Integer.valueOf(enter_ch05.getText());
+        catch_ch6 = Integer.valueOf(enter_ch06.getText());
+        catch_ch7 = Integer.valueOf(enter_ch07.getText());
+        catch_ch8 = Integer.valueOf(enter_ch08.getText());
+        catch_ch9 = Integer.valueOf(enter_ch09.getText());
+
+        System.out.println(catch_combo_grade);
+        System.out.println(catch_combo_class);
+        System.out.println(catch_name);
+        System.out.println(catch_ch1);
+        System.out.println(catch_ch2);
+        System.out.println(catch_ch3);
+        System.out.println(catch_ch4);
+        System.out.println(catch_ch5);
+        System.out.println(catch_ch6);
+        System.out.println(catch_ch7);
+        System.out.println(catch_ch8);
+        System.out.println(catch_ch9);
+
+        // 이곳에 DB 관련 코드 작성하면 됨
+
+    }
 }

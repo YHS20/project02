@@ -1,21 +1,28 @@
 package mathmedics.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.util.Duration;
 import mathmedics.model.DynamicViews;
 import mathmedics.model.Grade;
 import mathmedics.repository.memoryStudentRepository;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class Grade_Controller_of_All implements Initializable {
@@ -25,6 +32,10 @@ public class Grade_Controller_of_All implements Initializable {
 
     @FXML
     public AnchorPane ap;
+
+    @FXML
+    public Label label_clock;
+    Label clock = new Label();
 
     @FXML
     private TableView<Grade> table;
@@ -54,6 +65,9 @@ public class Grade_Controller_of_All implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        initClock();
+
         grade.setCellValueFactory(new PropertyValueFactory<Grade, String>("grade"));
         name.setCellValueFactory(new PropertyValueFactory<Grade, String>("name"));
         birthday.setCellValueFactory(new PropertyValueFactory<Grade, String>("birthday"));
@@ -100,6 +114,16 @@ public class Grade_Controller_of_All implements Initializable {
     @FXML
     public void support(MouseEvent event) throws IOException {
         DynamicViews.loadBorderCenter(bp, "page_support");
+    }
+
+    private void initClock() {
+
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("  yyyy-MM-dd - HH:mm:ss a  ");
+            label_clock.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
     }
 
 

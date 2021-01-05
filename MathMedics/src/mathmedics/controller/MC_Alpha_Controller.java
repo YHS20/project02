@@ -1,9 +1,13 @@
 package mathmedics.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -11,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.util.Duration;
 import mathmedics.model.DynamicViews;
 import mathmedics.model.Grade;
 import mathmedics.model.MC_Table;
@@ -18,6 +23,8 @@ import mathmedics.repository.memoryStudentRepository;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class MC_Alpha_Controller implements Initializable {
@@ -26,10 +33,8 @@ public class MC_Alpha_Controller implements Initializable {
     private BorderPane bp;
 
     @FXML
-    private TextField tf_search;
-
-    @FXML
-    private ImageView search;
+    public Label label_clock;
+    Label clock = new Label();
 
     @FXML
     private TableView<MC_Table> table;
@@ -77,6 +82,7 @@ public class MC_Alpha_Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        initClock();
         ch1.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch1"));
         ch2.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch2"));
         ch3.setCellValueFactory(new PropertyValueFactory<MC_Table, Integer>("ch3"));
@@ -138,6 +144,16 @@ public class MC_Alpha_Controller implements Initializable {
     @FXML
     public void support(MouseEvent event) throws IOException {
         DynamicViews.loadBorderCenter(bp, "page_support");
+    }
+
+    private void initClock() {
+
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("  yyyy-MM-dd - HH:mm:ss a  ");
+            label_clock.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
     }
 
 

@@ -17,7 +17,7 @@
       </Text>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE;">
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE; -fx-background-radius: 30;">
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,7 +41,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/Yoon">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/GraceYoon281">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -51,7 +51,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="Yoon@gmail.com">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="plantsyoon@gmail.com">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -72,7 +72,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </HBox>
-            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE;">
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE; -fx-background-radius: 30;">
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -131,7 +131,7 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE;">
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE; -fx-background-radius: 30;">
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -155,7 +155,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/Seungbae">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="sdgh1442@gmail.com">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -165,7 +165,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="seungbae@gmail.com">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/jeeseungbae">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -186,7 +186,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </HBox>
-            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE;">
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="330.0" style="-fx-background-color: WHITE; -fx-background-radius: 30;">
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -200,7 +200,7 @@
                               <Insets />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-font-weight: BOLD;" text="Yoon Hae-soo">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15; -fx-font-weight: BOLD;" text="Yoon Hye Soo">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -210,7 +210,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/Yoon">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="github.com/YHS20">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
@@ -220,7 +220,7 @@
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Text>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="Yoon@gmail.com">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 12; -fx-font-weight: BOld;" text="20sueyun@gmail.com">
                            <VBox.margin>
                               <Insets top="3.0" />
                            </VBox.margin>
