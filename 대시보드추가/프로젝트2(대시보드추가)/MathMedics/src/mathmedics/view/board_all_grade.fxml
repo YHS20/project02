@@ -65,7 +65,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#dashboard" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Dashboard" />
+                        <Button mnemonicParsing="false" onMouseClicked="#dashboard" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-font-weight: BOLD; -fx-font-size: 1.2em;" text="Dashboard"  />
                      </children>
                   </HBox>
                </children>

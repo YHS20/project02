@@ -13,7 +13,6 @@ and open the template in the editor.
     -fx-border-width: 0px 0px 0px 6px;
     -fx-background-color: #f7e600 !important;
     -fx-cursor: hand;
-    
 }
 
 .hover_fade:hover {
@@ -22,4 +21,10 @@ and open the template in the editor.
 
 .cursor_hand {
     -fx-cursor: hand;
+}
+
+#title, #btn{
+    -fx-font-family: "Roboto";
+    -fx-font-weight: bold;
+    -fx-font-size: 14
 }
